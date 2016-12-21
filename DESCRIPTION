@@ -1,0 +1,16 @@
+Package: lee
+Type: Package
+Title: Shows Time Pattern For 2016 Fall Classes in Biostatistics @ URMC
+Version: 0.1.0
+Author: Charles C. Lee
+Maintainer: Charles C. Lee <charles_lee@urmc.rochester.edu>
+Description: This package provides shortcuts to seeing the time pattern of
+    professors for BST 411, BST 464, and BST 494 - specifically when they arrive and
+    end class. Data were collected (see project proposal) and analyzed.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 5.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr

@@ -1,0 +1,25 @@
+---
+title: "Vignette for Package: Lee"
+author: "Vignette Author: Charles C. Lee"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Vignette Info
+
+This package creates shorcuts on the analysis of time data collected over the Fall 2016 semester in the Department of Biostatistics at the University of Rochecster Medical Center. "Time of Arrival" and "Time of Departure" data were collected for 3 classes: BST 411, BST 464, and BST 494. In the "Lee" package, there are 5 functions. The **"sq"** function was a demo. The **"TimeArr"** and **"TimeDep"** functions produce the mean, median, and standard deviation of the Arrival and Departure time, respecitvely, for each class. Time = 0 means that the professor was always on time. Taking time = 0 as the reference point, negative values mean they were early and positive values mean they were late. The functions **"plotArr"** and **"plotDep"** provides boxplots of the data for each class.
+
+```{r, echo=TRUE}
+### Loading googlesheets into R
+library(httpuv)
+library(httr)
+library(googlesheets)
+suppressPackageStartupMessages(library(dplyr))
+
+t <- gs_url("https://docs.google.com/spreadsheets/d/1c_vvamu1GT2VX82JFR8Bmh4nt22htNZh4ayjqICULwM/pubhtml")
+t.df <- gs_read(t)
+t.df
